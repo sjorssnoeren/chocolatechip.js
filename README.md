@@ -1,11 +1,11 @@
 # chocolatechip.js
-🍪 Universeel, disclaimer vrij en volledig open-source | AVG Cookiemelding met een strak aanpasbaar ontwerp
+🍪 Universeel, disclaimer vrij en volledig open-source | AVG Cookiemelding met een strak aanpasbaar ontwerp voor Google TagManager
 
 ## Introductie
 
 ## Roadmap
 
-* Responsive design
+* Responsive design improvements
 * Customizable SASS variabelen
 * Landingspage
 * Volledige teksten voor alle items
