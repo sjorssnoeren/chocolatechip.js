@@ -172,9 +172,13 @@ $paragraph-color: #5B5B5B;
     &__toggle {
       font-family: $font-family;
       color: $paragraph-color;
+      text-transform: none;
 
       input {
         margin-right: 4px;
+        appearance: checkbox;
+        display: inline-block;
+        width: auto;
       }
     }
   }
@@ -186,10 +190,13 @@ $paragraph-color: #5B5B5B;
       text-transform: none;
     }
 
+    p, a {
+      font-size: 16px;
+    }
+
     p {
       color: $paragraph-color;
       line-height: 1.6;
-      font-size: 16px;
     }
 
     h3 {
@@ -260,6 +267,10 @@ $paragraph-color: #5B5B5B;
       font-family: $font-family;
       font-style: normal;
       text-transform: none;
+    }
+
+    a {
+      font-size: 16px;
     }
 
     p {
