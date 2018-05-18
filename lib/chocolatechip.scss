@@ -102,6 +102,8 @@ $paragraph-color: #5B5B5B;
     font-size: 15px;
     display: inline-block;
     font-family: $font-family;
+    font-style: normal;
+    text-transform: none;
     box-sizing: border-box;
 
     @media screen and (max-width: 480px) {
@@ -180,6 +182,8 @@ $paragraph-color: #5B5B5B;
   &-modal {
     h3, p, a {
       font-family: $font-family;
+      font-style: normal;
+      text-transform: none;
     }
 
     p {
@@ -254,12 +258,15 @@ $paragraph-color: #5B5B5B;
   &-banner {
     h3, p {
       font-family: $font-family;
+      font-style: normal;
+      text-transform: none;
     }
 
     p {
       color: $paragraph-color;
       line-height: 1.6;
       font-size: 16px;
+      font-weight: 400;
       width: 80%;
       max-width: 1200px;
 
@@ -272,6 +279,7 @@ $paragraph-color: #5B5B5B;
     h3 {
       color: #333333;
       font-size: 18px;
+      font-weight: 700;
 
       @media screen and (max-width: 480px) {
         font-size: 16px;
@@ -282,6 +290,7 @@ $paragraph-color: #5B5B5B;
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 8888;
     width: 100%;
     box-sizing: border-box;
     box-shadow: 0 -1px 2px 0 rgba(#000, 0.1);
@@ -339,6 +348,9 @@ $paragraph-color: #5B5B5B;
         color: #999999;
         text-decoration: none;
         display: block;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
         line-height: 60px;
         padding: 0 20px;
 
