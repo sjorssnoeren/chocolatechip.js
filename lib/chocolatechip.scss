@@ -58,18 +58,38 @@ body {
     float: right;
   }
 
+  &-float--sm-none {
+    @media screen and (max-width: 480px) {
+      float: none;
+    }
+  }
+
   &-padding--v-medium {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    @media screen and (max-width: 480px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
   }
 
   &-padding--h-small {
     padding-left: 20px;
     padding-right: 20px;
+
+    @media screen and (max-width: 480px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   &-padding--small {
     padding: 20px;
+
+    @media screen and (max-width: 480px) {
+      padding: 10px;
+    }
   }
 
   &-margin--top-nano {
@@ -93,6 +113,15 @@ body {
     display: inline-block;
     font-family: $font-family;
     box-sizing: border-box;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      text-align: center;
+
+      & + .choc-btn {
+        margin-top: 10px;
+      }
+    }
 
     color: $btn-primary-color;
     background-color: $btn-primary-background-color;
@@ -151,6 +180,10 @@ body {
     &__toggle {
       font-family: $font-family;
       color: $paragraph-color;
+
+      input {
+        margin-right: 4px;
+      }
     }
   }
 
@@ -162,14 +195,30 @@ body {
     p {
       color: $paragraph-color;
       line-height: 1.6;
+      font-size: 16px;
+    }
+
+    h3 {
+      color: #333333;
+      font-size: 18px;
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
     }
 
     [data-choc-link=privacyPolicy] {
       color: #333333;
       line-height: 38px;
+      display: block;
 
       &:hover {
         text-decoration: none;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        padding-bottom: 20px;
       }
     }
 
@@ -178,6 +227,12 @@ body {
     margin: 100px auto;
     box-sizing: border-box;
     position: relative;
+
+    @media screen and (max-width: 480px) {
+      margin: 0;
+      height: 100%;
+      overflow: auto;
+    }
 
     &__overlay {
       background-color: rgba(#000, 0.3);
@@ -188,13 +243,21 @@ body {
       left: 0;
       top: 0;
       display: none;
-      overflow: auto;
+
+      @media screen and (min-width: 480px) {
+        overflow: auto;
+      }
     }
 
     .choc-close-btn {
       position: absolute;
       right: 30px;
       top: 30px;
+
+      @media screen and (max-width: 480px) {
+        right: 15px;
+        top: 13px;
+      }
     }
   }
 
@@ -206,12 +269,23 @@ body {
     p {
       color: $paragraph-color;
       line-height: 1.6;
-      max-width: 80%;
+      font-size: 16px;
+      width: 80%;
+      max-width: 1200px;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        font-size: 14px;
+      }
     }
 
     h3 {
       color: #333333;
       font-size: 18px;
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+      }
     }
 
     background-color: #ffffff;
@@ -219,7 +293,6 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 -1px 2px 0 rgba(#000, 0.1);
 
@@ -240,6 +313,22 @@ body {
       float: left;
       border-right: 1px solid #dddddd;
       box-sizing: border-box;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        border-right-width: 0;
+
+        margin-bottom: 20px;
+      }
+    }
+
+    &__dynamic-content {
+      width: calc(100% - 221px);
+      box-sizing: border-box;
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
     }
 
     &__header {
@@ -250,8 +339,10 @@ body {
     &__link {
       border-bottom: 1px solid #dddddd;
 
-      &:last-child {
-        border-bottom-width: 0;
+      @media screen and (min-width: 480px) {
+        &:last-child {
+          border-bottom-width: 0;
+        }
       }
 
       a {
@@ -264,6 +355,11 @@ body {
         &:hover {
           color: #333333;
         }
+
+        @media screen and (max-width: 480px) {
+          line-height: 44px;
+          padding: 0 10px;
+        }
       }
 
       &--state-active {
@@ -272,11 +368,6 @@ body {
           background-color: #f8f8f8;
         }
       }
-    }
-
-    &__dynamic-content {
-      width: calc(100% - 221px);
-      box-sizing: border-box;
     }
 
     &__item {
