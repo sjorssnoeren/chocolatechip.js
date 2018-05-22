@@ -3,6 +3,10 @@
 
 **Deze module is voor jou ontwikkeld door [The Red Corner - In it to win it.](https://theredcorner.nl)**
 
+## Voorbeeld
+
+![The Red Corner](./images/theredcorner-chocolatechip-screenshot.png)
+
 ## Introductie
 
 Vanaf 25 mei 2018 veranderd de europese wetgeving omtrent privacy. Dit heeft ingrijpende consequenties voor bijna alle bedrijven. Een onderdeel van deze nieuwe wetgeving is het vereisen van een heldere cookiewall. Om dit onderdeel wat te vergemakkelijken presenteren wij hierbij chocolatechip.js.
