@@ -170,19 +170,15 @@ $paragraph-color: #5B5B5B;
 
   &-form {
     &__toggle {
-      font-family: $font-family;
       color: $paragraph-color;
+      float: right;
+      margin: 0;
+      padding: 0;
+      display: block;
+      font-family: $font-family;
+      font-weight: 400;
+      font-style: normal;
       text-transform: none;
-
-      label {
-        margin: 0;
-        padding: 0;
-        float: right;
-        display: block;
-        font-weight: 400;
-        font-style: normal;
-        text-transform: none;
-      }
 
       input {
         margin-right: 4px;
