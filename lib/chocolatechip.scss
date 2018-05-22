@@ -202,6 +202,7 @@ $paragraph-color: #5B5B5B;
 
     p, a {
       font-size: 16px;
+      font-weight: 400;
     }
 
     p {
@@ -212,6 +213,7 @@ $paragraph-color: #5B5B5B;
     h3 {
       color: #333333;
       font-size: 18px;
+      font-weight: 700;
 
       @media screen and (max-width: 480px) {
         font-size: 16px;
@@ -222,6 +224,7 @@ $paragraph-color: #5B5B5B;
       color: #333333;
       line-height: 38px;
       display: block;
+      text-decoration: underline;
 
       &:hover {
         text-decoration: none;
