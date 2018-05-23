@@ -321,8 +321,12 @@ $paragraph-color: #5B5B5B;
 
     .choc-close-btn {
       position: absolute;
-      right: 24px;
-      top: 24px;
+      right: 20px;
+      top: 20px;
+      @media screen and (max-width: 480px) {
+        right: 13px;
+        top: 13px;
+      }
     }
   }
 
