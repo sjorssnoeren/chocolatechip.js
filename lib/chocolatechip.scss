@@ -32,6 +32,12 @@ $paragraph-color: #5B5B5B;
     display: none;
   }
 
+  &-display--sm-invisible { 
+    @media screen and (max-width: 480px) {
+      visibility: hidden;
+    }
+  }
+
   &-float--clearfix {
     &:after {
       display: block;
@@ -106,12 +112,27 @@ $paragraph-color: #5B5B5B;
     text-transform: none;
     box-sizing: border-box;
 
+    &--fixed {
+      display: none;
+    }
+
     @media screen and (max-width: 480px) {
       width: 100%;
       text-align: center;
 
       & + .choc-btn {
         margin-top: 10px;
+      }
+
+      &--fixed {
+        display: block;
+        width: 94%;
+        height: 7%;       
+        position: fixed;     
+        padding-bottom: 20px;
+        padding-top: 10px;
+        bottom: -3px;
+        background-color: white;
       }
     }
 
