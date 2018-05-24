@@ -32,6 +32,12 @@ $paragraph-color: #5B5B5B;
     display: none;
   }
 
+  &-display--sm-invisible { 
+    @media screen and (max-width: 480px) {
+      visibility: hidden;
+    }
+  }
+
   &-float--clearfix {
     &:after {
       display: block;
@@ -106,12 +112,27 @@ $paragraph-color: #5B5B5B;
     text-transform: none;
     box-sizing: border-box;
 
+    &--fixed {
+      display: none;
+    }
+
     @media screen and (max-width: 480px) {
       width: 100%;
       text-align: center;
 
       & + .choc-btn {
         margin-top: 10px;
+      }
+
+      &--fixed {
+        display: block;
+        width: 94%;
+        height: 7%;       
+        position: fixed;     
+        padding-bottom: 20px;
+        padding-top: 10px;
+        bottom: -3px;
+        background-color: white;
       }
     }
 
@@ -335,12 +356,14 @@ $paragraph-color: #5B5B5B;
       width: 200px;
       float: left;
       border-right: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
       box-sizing: border-box;
+      margin-bottom: -1px;
+      margin-right: -1px;
 
       @media screen and (max-width: 480px) {
         width: 100%;
         border-right-width: 0;
-
         margin-bottom: 20px;
       }
     }
@@ -348,7 +371,8 @@ $paragraph-color: #5B5B5B;
     &__dynamic-content {
       width: calc(100% - 221px);
       box-sizing: border-box;
-
+      border-left: 1px solid #dddddd;
+      
       @media screen and (max-width: 480px) {
         width: 100%;
       }
@@ -360,11 +384,11 @@ $paragraph-color: #5B5B5B;
     }
 
     &__link {
-      border-bottom: 1px solid #dddddd;
+      border-top: 1px solid #dddddd;
 
       @media screen and (min-width: 480px) {
-        &:last-child {
-          border-bottom-width: 0;
+        &:first-child {
+          border-top-width: 0;
         }
       }
 
