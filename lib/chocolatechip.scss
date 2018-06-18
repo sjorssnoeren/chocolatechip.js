@@ -259,7 +259,7 @@ $paragraph-color: #777777;
 
       @media screen and (max-width: 480px) {
         width: 100%;
-        padding-bottom: 40px;
+        margin-bottom: 40px;
       }
     }
 
@@ -300,7 +300,6 @@ $paragraph-color: #777777;
         left: 0;
         right: 0;
         padding: 10px;
-        pointer-events: none;
         box-shadow: 0 -1px 25px 25px #ffffff;
       }
     }
