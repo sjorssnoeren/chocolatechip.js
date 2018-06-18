@@ -14,6 +14,7 @@ $btn-secondary-hover-background-color: #ffffff;
 $btn-secondary-hover-color: #555555;
 $btn-secondary-hover-border-color: #555555;
 
+$border-color: #dddddd;
 $paragraph-color: #777777;
 
 .choc {
@@ -21,7 +22,7 @@ $paragraph-color: #777777;
     height: 1px;
     border: 0;
     outline: 0;
-    background-color: #dddddd;
+    background-color: $border-color;
   }
 
   &-display--block {
@@ -199,6 +200,38 @@ $paragraph-color: #777777;
     }
   }
 
+  &-table {
+    border-top: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-spacing: 0;
+    width: 100%;
+
+    td, th {
+      width: 100px;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 12px;
+      color: $paragraph-color;
+      border-right: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      margin: 0;
+      padding: 5px;
+      text-align: left;
+
+      &:nth-child(3) {
+        width: 200px;
+      }
+    }
+
+    td {
+      word-break: break-word;
+    }
+
+    th {
+      color: #000000;
+    }
+  }
+
   &-form {
     &__toggle {
       color: $paragraph-color;
@@ -245,6 +278,10 @@ $paragraph-color: #777777;
       @media screen and (max-width: 480px) {
         font-size: 16px;
       }
+    }
+
+    .choc-table {
+      margin-top: 10px;
     }
 
     [data-choc-link=privacyPolicy] {
@@ -371,8 +408,8 @@ $paragraph-color: #777777;
     &__navigation {
       width: 200px;
       float: left;
-      border-right: 1px solid #dddddd;
-      border-bottom: 1px solid #dddddd;
+      border-right: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
       box-sizing: border-box;
       margin-bottom: -1px;
       margin-right: -1px;
@@ -387,7 +424,7 @@ $paragraph-color: #777777;
     &__dynamic-content {
       width: calc(100% - 221px);
       box-sizing: border-box;
-      border-left: 1px solid #dddddd;
+      border-left: 1px solid $border-color;
 
       @media screen and (max-width: 480px) {
         width: 100%;
@@ -400,7 +437,7 @@ $paragraph-color: #777777;
     }
 
     &__link {
-      border-top: 1px solid #dddddd;
+      border-top: 1px solid $border-color;
 
       &:first-child {
         border-top-width: 0;
