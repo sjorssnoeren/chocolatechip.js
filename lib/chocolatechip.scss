@@ -14,7 +14,7 @@ $btn-secondary-hover-background-color: #ffffff;
 $btn-secondary-hover-color: #555555;
 $btn-secondary-hover-border-color: #555555;
 
-$paragraph-color: #5B5B5B;
+$paragraph-color: #777777;
 
 .choc {
   &-hr {
@@ -109,7 +109,7 @@ $paragraph-color: #5B5B5B;
     padding: 10px 18px;
     border: 1px solid transparent;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 14px;
     display: inline-block;
     font-family: $font-family;
     font-style: normal;
@@ -401,7 +401,7 @@ $paragraph-color: #5B5B5B;
       &--state-active {
         a {
           color: #333333;
-          background-color: #f8f8f8;
+          background-color: #ececec;
         }
       }
     }
