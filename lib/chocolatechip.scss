@@ -259,7 +259,7 @@ $paragraph-color: #777777;
 
       @media screen and (max-width: 480px) {
         width: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
       }
     }
 
@@ -272,6 +272,7 @@ $paragraph-color: #777777;
     @media screen and (max-width: 480px) {
       margin: 0;
       height: 100%;
+      padding-bottom: 80px;
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
     }
@@ -288,6 +289,19 @@ $paragraph-color: #777777;
 
       @media screen and (min-width: 480px) {
         overflow: auto;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      &__actions {
+        background-color: #ffffff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        pointer-events: none;
+        box-shadow: 0 -1px 25px 25px #ffffff;
       }
     }
 
