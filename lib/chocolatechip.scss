@@ -389,10 +389,8 @@ $paragraph-color: #777777;
     &__link {
       border-top: 1px solid #dddddd;
 
-      @media screen and (min-width: 480px) {
-        &:first-child {
-          border-top-width: 0;
-        }
+      &:first-child {
+        border-top-width: 0;
       }
 
       a {
