@@ -32,7 +32,7 @@ $paragraph-color: #5B5B5B;
     display: none;
   }
 
-  &-display--sm-invisible { 
+  &-display--sm-invisible {
     @media screen and (max-width: 480px) {
       visibility: hidden;
     }
@@ -88,6 +88,10 @@ $paragraph-color: #5B5B5B;
     }
   }
 
+  &-padding--tiny {
+    padding: 12px;
+  }
+
   &-margin--top-nano {
     margin-top: 6px;
   }
@@ -126,12 +130,12 @@ $paragraph-color: #5B5B5B;
 
       &--fixed {
         display: block;
-        width: 94%;
-        height: 7%;       
-        position: fixed;     
+        width: 100%;
+        position: fixed;
+        bottom: 0;
         padding-bottom: 20px;
         padding-top: 10px;
-        bottom: -3px;
+        box-sizing: border-box;
         background-color: white;
       }
     }
@@ -293,40 +297,6 @@ $paragraph-color: #5B5B5B;
   }
 
   &-banner {
-    h3, p {
-      font-family: $font-family;
-      font-style: normal;
-      text-transform: none;
-    }
-
-    a {
-      font-size: 16px;
-    }
-
-    p {
-      color: $paragraph-color;
-      line-height: 1.6;
-      font-size: 16px;
-      font-weight: 400;
-      width: 80%;
-      max-width: 1200px;
-
-      @media screen and (max-width: 480px) {
-        width: 100%;
-        font-size: 14px;
-      }
-    }
-
-    h3 {
-      color: #333333;
-      font-size: 18px;
-      font-weight: 700;
-
-      @media screen and (max-width: 480px) {
-        font-size: 16px;
-      }
-    }
-
     background-color: #ffffff;
     position: fixed;
     bottom: 0;
@@ -334,19 +304,35 @@ $paragraph-color: #5B5B5B;
     z-index: 8888;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 -1px 2px 0 rgba(#000, 0.1);
+    box-shadow: 0 -1px 1px 0 rgba(#000, 0.3);
 
-    &__actions {
-      padding-top: 10px;
+    h3, p {
+      font-family: $font-family;
+      font-style: normal;
+      text-transform: none;
     }
 
-    .choc-close-btn {
-      position: absolute;
-      right: 20px;
-      top: 20px;
+    p {
+      color: $paragraph-color;
+      line-height: 1.5;
+      font-size: 13px;
+      font-weight: 400;
+      max-width: 1200px;
+
+      a {
+        font-size: 13px;
+        font-weight: 400;
+        white-space: nowrap;
+        color: #000000;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
       @media screen and (max-width: 480px) {
-        right: 13px;
-        top: 13px;
+        width: 100%;
       }
     }
   }
@@ -372,7 +358,7 @@ $paragraph-color: #5B5B5B;
       width: calc(100% - 221px);
       box-sizing: border-box;
       border-left: 1px solid #dddddd;
-      
+
       @media screen and (max-width: 480px) {
         width: 100%;
       }
