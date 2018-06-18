@@ -32,6 +32,12 @@ $paragraph-color: #777777;
     display: none;
   }
 
+  &-display--sm-inline-block {
+    @media screen and (max-width: 480px) {
+      display: inline-block;
+    }
+  }
+
   &-display--sm-invisible {
     @media screen and (max-width: 480px) {
       visibility: hidden;
@@ -266,7 +272,8 @@ $paragraph-color: #777777;
     @media screen and (max-width: 480px) {
       margin: 0;
       height: 100%;
-      overflow: auto;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
     }
 
     &__overlay {
@@ -305,6 +312,16 @@ $paragraph-color: #777777;
     width: 100%;
     box-sizing: border-box;
     box-shadow: 0 -1px 1px 0 rgba(#000, 0.3);
+
+    @media screen and (max-width: 480px) {
+      &__description {
+        display: none;
+
+        &--visible {
+          display: inline;
+        }
+      }
+    }
 
     h3, p {
       font-family: $font-family;
