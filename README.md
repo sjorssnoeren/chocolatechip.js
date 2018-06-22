@@ -11,7 +11,7 @@
 
 Vanaf 25 mei 2018 veranderd de europese wetgeving omtrent privacy. Dit heeft ingrijpende consequenties voor bijna alle bedrijven. Een onderdeel van deze nieuwe wetgeving is het vereisen van een heldere cookiewall. Om dit onderdeel wat te vergemakkelijken presenteren wij hierbij chocolatechip.js.
 
-Een volledig open-source plug & play cookiewall die wordt geïntegreerd met Google Tag Manager. Geen disclaimer, geen onverwachte backlinks, gewoon een cookiewall die er goed uit ziet en jouw leven een stukje makkelijker maakt.
+Een volledig open-source plug & play cookiewall die wordt geïntegreerd met Google Tag Manager. Geen disclaimer, geen onverwachte backlinks, gewoon een cookiewall die er goed uit ziet en jouw leven een stukje makkelijker maakt. **Nieuw:** Vanaf nu voeg je gemakkelijk jouw cookie lijsten in. Maak een CSV met de [volgende opmaak](https://docs.google.com/spreadsheets/d/1U5ZqnbEnjFA1wj1d_ScN6NHMcUgy4QooAjDLQl2cIRA/edit?usp=sharing), en met 1 regel code staat je sheet gekoppeld.
 
 [Bekijk de demo](https://sjorssnoeren.github.io/chocolatechip.js/)
 
@@ -44,6 +44,25 @@ Maak een nieuwe aangepaste trigger aan in Google Tag Manager. In onderstaande ta
 | ChocolateChip_analytics | Analytische Cookies | Voor analyse doeleinden om de website te verbeteren. |
 | ChocolateChip_advertisements | Advertentie Cookies | Om bij te houden welke advertenties een gebruik heeft gezien, en hoe vaak. |
 
+#### Stap 3: Koppel jouw CSV met cookies
+
+Vanaf heden is het ook mogelijk een CSV te gebruiken om de verschillende cookies uit te lichten. Een voorbeeld van deze CSV vind je [hier](https://docs.google.com/spreadsheets/d/1U5ZqnbEnjFA1wj1d_ScN6NHMcUgy4QooAjDLQl2cIRA/edit?usp=sharing). Je koppelt eenvoudig de cookie lijst door de URL van een CSV in te voegen met de optie `cookiesSheetURL`. Dit kun je bij een google docs document doen door de URL te kopieëren, het woord `/edit` aan het einde van de URL te vervangen met `/export?format=csv`.
+
+Bekijk onderstaand voorbeeld hoe dit er in zijn totaliteit uit ziet:
+
+```html
+<script src="https://gitcdn.link/repo/sjorssnoeren/chocolatechip.js/master/dist/js/chocolatechip.js"></script>
+<script>
+  ChocolateChip.eat({
+    includes: ['userPreferences', 'analytics', 'advertisements'],
+    privacyPolicyURL: 'http://example.com/privacy-policy',
+    cookiesSheetURL: 'https://docs.google.com/spreadsheets/d/1U5ZqnbEnjFA1wj1d_ScN6NHMcUgy4QooAjDLQl2cIRA/export?format=csv'
+  });
+</script>
+```
+
+De CSV wordt ingeladen en deze wordt netjes in een opgemaakte tabel getoond. In de kolom *category* gebruik je de een van de volgende waarden: `functional`, `userPreferences`, `analytics` of `advertisements`. Om de tabel te kunnen zien, moet de categorie natuurlijk zijn benoemd in het script onder de key: `includes`.
+
 Meer uitleg volgt binnenkort..
 
 ## Roadmap
@@ -51,7 +70,6 @@ Meer uitleg volgt binnenkort..
 * Responsive design improvements
 * Customizable SASS variabelen
 * Landingspage
-* Volledige teksten voor alle items
 * Uitgebreidere documentatie
 
 ## Licentie
