@@ -1,22 +1,3 @@
-# chocolatechip.js
-🍪 Universeel, disclaimer vrij en volledig open-source | AVG Cookiemelding met een strak aanpasbaar ontwerp voor Google Tag Manager
-
-**Deze module is voor jou ontwikkeld door [The Red Corner - In it to win it.](https://theredcorner.nl)**
-
-## Voorbeeld
-
-![The Red Corner](./images/theredcorner-chocolatechip-screenshot.png)
-
-## Introductie
-
-Vanaf 25 mei 2018 veranderd de europese wetgeving omtrent privacy. Dit heeft ingrijpende consequenties voor bijna alle bedrijven. Een onderdeel van deze nieuwe wetgeving is het vereisen van een heldere cookiewall. Om dit onderdeel wat te vergemakkelijken presenteren wij hierbij chocolatechip.js.
-
-Een volledig open-source plug & play cookiewall die wordt geïntegreerd met Google Tag Manager. Geen disclaimer, geen onverwachte backlinks, gewoon een cookiewall die er goed uit ziet en jouw leven een stukje makkelijker maakt. **Nieuw:** Vanaf nu voeg je gemakkelijk jouw cookie lijsten in. Maak een CSV met de [volgende opmaak](https://docs.google.com/spreadsheets/d/1U5ZqnbEnjFA1wj1d_ScN6NHMcUgy4QooAjDLQl2cIRA/edit?usp=sharing), en met 1 regel code staat je sheet gekoppeld.
-
-[Bekijk de demo](https://sjorssnoeren.github.io/chocolatechip.js/)
-
-*Let op: Om volledig te voldoen aan de AVG of GDPR moeten meer acties ondernomen worden. Wij geven nooit garantie over het daadwerkelijk voldoen aan de gestelde eisen, gebruik is volledig op eigen risico. Snel hulp nodig met het implementeren van de nieuwe wetgeving binnen jouw organisatie? [Stuur ons een mail](mailto:mail@theredcorner.nl)*
-
 ## Installatie
 
 #### Stap 1: Voeg chocolatechip.js toe
@@ -64,14 +45,3 @@ Bekijk onderstaand voorbeeld hoe dit er in zijn totaliteit uit ziet:
 De CSV wordt ingeladen en deze wordt netjes in een opgemaakte tabel getoond. In de kolom *category* gebruik je de een van de volgende waarden: `functional`, `userPreferences`, `analytics` of `advertisements`. Om de tabel te kunnen zien, moet de categorie natuurlijk zijn benoemd in het script onder de key: `includes`.
 
 Meer uitleg volgt binnenkort..
-
-## Roadmap
-
-* Responsive design improvements
-* Customizable SASS variabelen
-* Landingspage
-* Uitgebreidere documentatie
-
-## Licentie
-
-Dit project is gelicenseerd onder MIT. Raadpleeg het LICENSE bestand voor meer informatie.

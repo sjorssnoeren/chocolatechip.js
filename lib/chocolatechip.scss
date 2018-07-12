@@ -14,14 +14,15 @@ $btn-secondary-hover-background-color: #ffffff;
 $btn-secondary-hover-color: #555555;
 $btn-secondary-hover-border-color: #555555;
 
-$paragraph-color: #5B5B5B;
+$border-color: #dddddd;
+$paragraph-color: #777777;
 
 .choc {
   &-hr {
     height: 1px;
     border: 0;
     outline: 0;
-    background-color: #dddddd;
+    background-color: $border-color;
   }
 
   &-display--block {
@@ -32,7 +33,13 @@ $paragraph-color: #5B5B5B;
     display: none;
   }
 
-  &-display--sm-invisible { 
+  &-display--sm-inline-block {
+    @media screen and (max-width: 480px) {
+      display: inline-block;
+    }
+  }
+
+  &-display--sm-invisible {
     @media screen and (max-width: 480px) {
       visibility: hidden;
     }
@@ -88,6 +95,10 @@ $paragraph-color: #5B5B5B;
     }
   }
 
+  &-padding--tiny {
+    padding: 12px;
+  }
+
   &-margin--top-nano {
     margin-top: 6px;
   }
@@ -105,7 +116,7 @@ $paragraph-color: #5B5B5B;
     padding: 10px 18px;
     border: 1px solid transparent;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 14px;
     display: inline-block;
     font-family: $font-family;
     font-style: normal;
@@ -126,12 +137,12 @@ $paragraph-color: #5B5B5B;
 
       &--fixed {
         display: block;
-        width: 94%;
-        height: 7%;       
-        position: fixed;     
+        width: 100%;
+        position: fixed;
+        bottom: 0;
         padding-bottom: 20px;
         padding-top: 10px;
-        bottom: -3px;
+        box-sizing: border-box;
         background-color: white;
       }
     }
@@ -189,6 +200,38 @@ $paragraph-color: #5B5B5B;
     }
   }
 
+  &-table {
+    border-top: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-spacing: 0;
+    width: 100%;
+
+    td, th {
+      width: 100px;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 12px;
+      color: $paragraph-color;
+      border-right: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      margin: 0;
+      padding: 5px;
+      text-align: left;
+
+      &:nth-child(3) {
+        width: 200px;
+      }
+    }
+
+    td {
+      word-break: break-word;
+    }
+
+    th {
+      color: #000000;
+    }
+  }
+
   &-form {
     &__toggle {
       color: $paragraph-color;
@@ -237,6 +280,10 @@ $paragraph-color: #5B5B5B;
       }
     }
 
+    .choc-table {
+      margin-top: 10px;
+    }
+
     [data-choc-link=privacyPolicy] {
       color: #333333;
       line-height: 38px;
@@ -249,7 +296,7 @@ $paragraph-color: #5B5B5B;
 
       @media screen and (max-width: 480px) {
         width: 100%;
-        padding-bottom: 20px;
+        margin-bottom: 40px;
       }
     }
 
@@ -262,7 +309,9 @@ $paragraph-color: #5B5B5B;
     @media screen and (max-width: 480px) {
       margin: 0;
       height: 100%;
-      overflow: auto;
+      padding-bottom: 80px;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
     }
 
     &__overlay {
@@ -280,6 +329,18 @@ $paragraph-color: #5B5B5B;
       }
     }
 
+    @media screen and (max-width: 480px) {
+      &__actions {
+        background-color: #ffffff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        box-shadow: 0 -1px 25px 25px #ffffff;
+      }
+    }
+
     .choc-close-btn {
       position: absolute;
       right: 30px;
@@ -293,40 +354,6 @@ $paragraph-color: #5B5B5B;
   }
 
   &-banner {
-    h3, p {
-      font-family: $font-family;
-      font-style: normal;
-      text-transform: none;
-    }
-
-    a {
-      font-size: 16px;
-    }
-
-    p {
-      color: $paragraph-color;
-      line-height: 1.6;
-      font-size: 16px;
-      font-weight: 400;
-      width: 80%;
-      max-width: 1200px;
-
-      @media screen and (max-width: 480px) {
-        width: 100%;
-        font-size: 14px;
-      }
-    }
-
-    h3 {
-      color: #333333;
-      font-size: 18px;
-      font-weight: 700;
-
-      @media screen and (max-width: 480px) {
-        font-size: 16px;
-      }
-    }
-
     background-color: #ffffff;
     position: fixed;
     bottom: 0;
@@ -334,19 +361,45 @@ $paragraph-color: #5B5B5B;
     z-index: 8888;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 -1px 2px 0 rgba(#000, 0.1);
+    box-shadow: 0 -1px 1px 0 rgba(#000, 0.3);
 
-    &__actions {
-      padding-top: 10px;
+    @media screen and (max-width: 480px) {
+      &__description {
+        display: none;
+
+        &--visible {
+          display: inline;
+        }
+      }
     }
 
-    .choc-close-btn {
-      position: absolute;
-      right: 20px;
-      top: 20px;
+    h3, p {
+      font-family: $font-family;
+      font-style: normal;
+      text-transform: none;
+    }
+
+    p {
+      color: $paragraph-color;
+      line-height: 1.5;
+      font-size: 13px;
+      font-weight: 400;
+      max-width: 1200px;
+
+      a {
+        font-size: 13px;
+        font-weight: 400;
+        white-space: nowrap;
+        color: #000000;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
       @media screen and (max-width: 480px) {
-        right: 13px;
-        top: 13px;
+        width: 100%;
       }
     }
   }
@@ -355,8 +408,8 @@ $paragraph-color: #5B5B5B;
     &__navigation {
       width: 200px;
       float: left;
-      border-right: 1px solid #dddddd;
-      border-bottom: 1px solid #dddddd;
+      border-right: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
       box-sizing: border-box;
       margin-bottom: -1px;
       margin-right: -1px;
@@ -371,8 +424,8 @@ $paragraph-color: #5B5B5B;
     &__dynamic-content {
       width: calc(100% - 221px);
       box-sizing: border-box;
-      border-left: 1px solid #dddddd;
-      
+      border-left: 1px solid $border-color;
+
       @media screen and (max-width: 480px) {
         width: 100%;
       }
@@ -384,12 +437,10 @@ $paragraph-color: #5B5B5B;
     }
 
     &__link {
-      border-top: 1px solid #dddddd;
+      border-top: 1px solid $border-color;
 
-      @media screen and (min-width: 480px) {
-        &:first-child {
-          border-top-width: 0;
-        }
+      &:first-child {
+        border-top-width: 0;
       }
 
       a {
@@ -415,7 +466,7 @@ $paragraph-color: #5B5B5B;
       &--state-active {
         a {
           color: #333333;
-          background-color: #f8f8f8;
+          background-color: #ececec;
         }
       }
     }
