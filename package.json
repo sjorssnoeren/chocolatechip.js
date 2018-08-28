@@ -13,8 +13,6 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^0.28.11",
-    "eslint": "^5.4.0",
-    "eslint-config-airbnb": "^17.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.11.2",
     "node-sass": "^4.9.3",
@@ -24,6 +22,7 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
+    "acorn-dynamic-import": "^3.0.0",
     "simplecsv": "0.0.49"
   }
 }
