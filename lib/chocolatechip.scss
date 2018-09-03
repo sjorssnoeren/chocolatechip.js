@@ -434,7 +434,7 @@ $paragraph-color: #777777;
 
     &__header {
       @extend .choc-float--clearfix;
-      padding-bottom: 20px;
+      padding-bottom: 0;
     }
 
     &__link {
