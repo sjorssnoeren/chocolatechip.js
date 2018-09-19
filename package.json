@@ -4,6 +4,7 @@
   "description": "",
   "main": "chocolatechip.js",
   "scripts": {
+    "start": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sjors Snoeren",
