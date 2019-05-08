@@ -63,7 +63,25 @@ Bekijk onderstaand voorbeeld hoe dit er in zijn totaliteit uit ziet:
 
 De CSV wordt ingeladen en deze wordt netjes in een opgemaakte tabel getoond. In de kolom *category* gebruik je de een van de volgende waarden: `functional`, `userPreferences`, `analytics` of `advertisements`. Om de tabel te kunnen zien, moet de categorie natuurlijk zijn benoemd in het script onder de key: `includes`.
 
-Meer uitleg volgt binnenkort..
+## Extra opties
+| Key | Beschrijving | Voorbeeld |
+|--------|-------|--------------|
+| `language` | Geeft de taal van de banner aan. Mocht deze taal niet in de vertalingen staan wordt `nl_NL` aangehouden.| `nl_NL`, `en_GB` |
+| `translations` | Wordt gebruikt om de huidige standaard `en_NL` en `en_GB` vertalingen te overschrijven en om nieuwe talen toe te voegen, die vervolgens via `language` aangeroepen kunnen worden. De keys hiervoor zijn te vinden in `lib/defaultTranslations.js`. | zie hieronder |
+
+Met de onderstaande opties zou de standaard nederlandse vertaling getoond worden. Echter mocht `language` bijvoorbeeld `fr_FR` zijn, dan wordt de franse vertaling getoond, waar in dit geval alleen `'bannerTemplate.actionSluiten'` naar het frans vertaald zal zijn.
+
+```
+ChocolateChip.eat({
+    ...
+    language: 'nl_NL',
+    translations: {
+    	fr_FR: {
+    		'bannerTemplate.actionSluiten': 'Fermer',
+    	}
+    },
+  });
+```
 
 ## Roadmap
 
