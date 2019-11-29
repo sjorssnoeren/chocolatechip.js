@@ -4,7 +4,8 @@
   "description": "",
   "main": "chocolatechip.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch"
   },
   "author": "Sjors Snoeren",
   "license": "MIT",
