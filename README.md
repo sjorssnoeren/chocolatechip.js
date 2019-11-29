@@ -65,12 +65,14 @@ De CSV wordt ingeladen en deze wordt netjes in een opgemaakte tabel getoond. In 
 
 ## Extra opties
 | Key | Beschrijving | Type | Voorbeeld |
-|--------|-------|--------------|
+|-----|--------------|------|-----------|
 | `language` | Geeft de taal van de banner aan. Mocht deze taal niet in de vertalingen staan wordt `nl_NL` aangehouden.| String | `nl_NL`, `en_GB` |
-| `translations` | Wordt gebruikt om de huidige standaard `en_NL` en `en_GB` vertalingen te overschrijven en om nieuwe talen toe te voegen, die vervolgens via `language` aangeroepen kunnen worden. De keys hiervoor zijn te vinden in `lib/defaultTranslations.js`. | Object | zie hieronder |
+| `translations` | Wordt gebruikt om de huidige standaard `en_NL` en `en_GB` vertalingen te overschrijven en om nieuwe talen toe te voegen, die vervolgens via `language` aangeroepen kunnen worden. De keys hiervoor zijn te vinden in `lib/defaultTranslations.js`. | Object | zie beschrijving onder deze tabel |
 | `bannerLayout` | Kan worden gebruikt om de cookie banner bovenaan de pagina te tonen | String | `bottom` (standaard), `top` |
 | `disableAcceptThroughInteraction` | Standaard wordt elke klik op de pagina geregistreerd als consent. Met de nieuwe wetgeving is het sterk aangeraden de standaard optie te overschrijven. Wanneer deze optie true is zal de gebruiken enkel nog met actieve consent de cookies accepteren | Boolean | `true` / `false` |
 | `cookiePreferencesDefaultChecked` | Maakt het mogelijk om alle verschillende voorkeuren standaard aan te vinken. Wanneer een gebruiker de voorkeuren wil aanpassen krijgt hij nog de mogelijkheid om deze uit te zetten. Let op: dit is niet geoorloofd door de nieuwe AVG/GDPR wetgeving. | Boolean | `true` / `false` |
+
+### Aanpassen taalbestand
 
 Met de onderstaande opties zou de standaard nederlandse vertaling getoond worden. Echter mocht `language` bijvoorbeeld `fr_FR` zijn, dan wordt de franse vertaling getoond, waar in dit geval alleen `'bannerTemplate.actionSluiten'` naar het frans vertaald zal zijn.
 
