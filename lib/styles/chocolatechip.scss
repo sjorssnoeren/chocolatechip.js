@@ -229,6 +229,40 @@ $paragraph-color: #777777;
     th {
       color: #000000;
     }
+
+    &__header {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      color: $paragraph-color;
+      background-color: $border-color;
+      padding: 14px 16px;
+      margin-top: 10px;
+      margin-bottom: -11px;
+      display: block;
+      text-decoration: none;
+
+      &--accessory {
+        float: right;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 16px;
+        color: #000000;
+        width: 20px;
+        display: block;
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+
+        .choc-table__header--accessory {
+          color: #fff !important;
+        }
+      }
+    }
   }
 
   &-form {
@@ -452,6 +486,7 @@ $paragraph-color: #777777;
       width: calc(100% - 199px);
       box-sizing: border-box;
       border-left: 1px solid $border-color;
+      padding-bottom: 30px;
 
       @media screen and (max-width: 480px) {
         width: 100%;
