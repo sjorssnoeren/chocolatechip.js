@@ -24,7 +24,7 @@ Een volledig open-source plug & play cookiewall die wordt geïntegreerd met Goog
 Voeg het volgende script toe voor het sluiten van met van `<body>` tag. Dit kan in de pagina zelf of met behulp van Google TagManager.
 
 ```html
-<script src="https://gitcdn.link/repo/sjorssnoeren/chocolatechip.js/master/dist/js/chocolatechip.js"></script>
+<script src="https://gitcdn.link/repo/sjorssnoeren/chocolatechip.js/release-v2/dist/js/chocolatechip.js"></script>
 <script>
   ChocolateChip.eat({
     includes: ['userPreferences', 'analytics', 'advertisements'],
